@@ -21,7 +21,7 @@ header {
 	padding: 0 20px;
 }
 
-header h1 {
+h1 {
 	color: hotpink;
 }
 
@@ -32,7 +32,7 @@ aside {
 	flex-grow: 1;
 }
 
-aside > h2 {
+.h2-aside {
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -42,11 +42,11 @@ aside > h2 {
 	list-style: none;
 }
 
-.useful-links > li {
+.useful-links__item {
   background-color: #444;
 }
 
-.useful-links > li a {
+.useful-links__item a {
   color: #fff;
   text-decoration: none;
   display: block;
@@ -55,7 +55,7 @@ aside > h2 {
   background-color: #2a2f34;
 }
 
-.useful-links > li a:hover {
+.useful-links__item a:hover {
   text-decoration: none;
   color: #ddd;
   background-color: #212529;
@@ -74,7 +74,7 @@ main {
 	flex-grow: 3;
 }
 
-main > h2 {
+.h2-main {
 	display: block;
 	position: sticky;
 	padding: 20px;
@@ -88,6 +88,6 @@ main > h2 {
 	padding-left: 20px;
 }
 
-.surname-list > li {
+.surname-list__item {
 	padding: 10px 0;
 }
