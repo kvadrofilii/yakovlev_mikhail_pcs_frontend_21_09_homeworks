@@ -1,17 +1,18 @@
-* {
-	box-sizing: border-box;
-}
-
-body {
+.page-body {
   margin: 0;
+	min-width: 320px;
 	font-family: Helvetica, Arial, sans-serif;
 	background-color: #212529;
-	position: static;
+}
+
+.page-main {
+	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-header {
+.page-header {
+	box-sizing: border-box;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -21,18 +22,19 @@ header {
 	padding: 0 20px;
 }
 
-h1 {
+.page-header__title {
 	color: hotpink;
 }
 
-aside {
+.page-aside {
+	box-sizing: border-box;
 	margin-top: 80px;
 	color: #fff;
 	background-color: #212529;
 	flex-grow: 1;
 }
 
-.h2-aside {
+.page-aside__title {
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -42,11 +44,7 @@ aside {
 	list-style: none;
 }
 
-.useful-links__item {
-  background-color: #444;
-}
-
-.useful-links__item a {
+.useful-links__link {
   color: #fff;
   text-decoration: none;
   display: block;
@@ -55,26 +53,20 @@ aside {
   background-color: #2a2f34;
 }
 
-.useful-links__item a:hover {
+.useful-links__link:hover {
   text-decoration: none;
   color: #ddd;
   background-color: #212529;
 }
 
-.relative-element {
-	position: relative;
-	top: 20px;
-	padding: 20px;
-	color: hotpink;
-}
-
-main {
+.page-content {
+	box-sizing: border-box;
 	margin-top: 80px;
 	background-color: #fff;
 	flex-grow: 3;
 }
 
-.h2-main {
+.page-content__title {
 	display: block;
 	position: sticky;
 	padding: 20px;
