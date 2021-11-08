@@ -1,0 +1,85 @@
+.page-body {
+  margin: 0;
+	min-width: 320px;
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #212529;
+}
+
+.page-main {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.page-header {
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 80px;
+	z-index: 9999;
+	background-color: #444;
+	padding: 0 20px;
+}
+
+.page-header__title {
+	color: hotpink;
+}
+
+.page-aside {
+	box-sizing: border-box;
+	margin-top: 80px;
+	color: #fff;
+	background-color: #212529;
+	flex-grow: 1;
+}
+
+.page-aside__title {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.useful-links {
+	padding-left: 0;
+	list-style: none;
+}
+
+.useful-links__link {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 2px solid #212529;
+  background-color: #2a2f34;
+}
+
+.useful-links__link:hover {
+  text-decoration: none;
+  color: #ddd;
+  background-color: #212529;
+}
+
+.page-content {
+	box-sizing: border-box;
+	margin-top: 80px;
+	background-color: #fff;
+	flex-grow: 3;
+}
+
+.page-content__title {
+	display: block;
+	position: sticky;
+	padding: 20px;
+	margin: 0;
+	top: 80px;
+	background-color: hotpink;
+}
+
+.surname-list {
+	list-style: none;
+	padding-left: 20px;
+}
+
+.surname-list__item {
+	padding: 10px 0;
+}
