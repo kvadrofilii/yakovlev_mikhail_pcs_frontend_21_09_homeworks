@@ -88,6 +88,7 @@ body {
 	left: 0;
 	margin: 0;
 	cursor: pointer;
+	z-index: 10;
 }
 
 .form__checkbox-mark {
@@ -98,14 +99,12 @@ body {
 	border-radius: 7px;
 }
 
-.form__checkbox:checked + .form__checkbox-mark {
-	background: #787878;
-	border: 2px solid #606060;
-}
-
-.form__checkbox:focus + .form__checkbox-mark {
-	outline: none;
-	border: 2px solid blue;
+.form__checkbox:checked + .form__checkbox-mark::after {
+	content: '✓';
+	position: absolute;
+	color: #787878;
+	left: 6px;
+	font-size: 24px;
 }
 
 .form__checkbox-label {
@@ -173,6 +172,11 @@ body {
 	.form__checkbox-mark {
 		width: 24px;
 		height: 24px;
+	}
+
+	.form__checkbox:checked + .form__checkbox-mark::after {
+		left: 6px;
+		font-size: 16px;
 	}
 
 	.form__checkbox-label {
