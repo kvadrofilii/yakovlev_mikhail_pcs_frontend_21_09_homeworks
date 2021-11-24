@@ -16,4 +16,8 @@ fetch('https://reqres.in/api/users?per_page=12')
       return acc + item?.first_name + ' ' + item?.last_name + ', ';
     }, '');
     console.log('Наша база содержит данные следующих пользователей:', result.slice(0, -2));
+    console.log('-----------\nПункт №5:\n-----------');
+    Object.entries(body?.data[0])?.forEach(([key]) => {
+      console.log(key);
+    });
   })
