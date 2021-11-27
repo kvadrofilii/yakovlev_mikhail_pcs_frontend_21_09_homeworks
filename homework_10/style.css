@@ -38,6 +38,7 @@ body {
 
 .form__input-wrapper {
 	padding-top: 11px;
+	position: relative;
 }
 
 .form__input {
@@ -72,11 +73,17 @@ body {
 }
 
 .form__checkbox-wrapper {
-	position: relative;
 	margin-top: 19px;
-	width: fit-content;
+	position: relative;
+}
+
+.form__checkbox-wrapper_flex {
 	display: flex;
 	align-items: center;
+}
+
+.form__checkbox-wrapper_fit {
+	position: relative;
 }
 
 .form__checkbox {
@@ -113,10 +120,46 @@ body {
 	color: #787878;
 }
 
+.form__checkbox-label a {
+	color: #787878;
+}
+
+.form__star {
+	position: absolute;
+	left: -14px;
+	top: 40px;
+	font-size: 18px;
+}
+
+.form__checkbox-star {
+	position: absolute;
+	left: -14px;
+	font-size: 18px;
+}
+
+.form__text-alert {
+	font-size: 10px;
+	line-height: 16px;
+	padding-left: 10px;
+}
+
+.form__text-alert_colored {
+	color: #CB2424;
+}
+
+#email-alert,
+#password-alert,
+#text-alert-1,
+#text-alert-2,
+#text-alert-3 {
+	display: none;
+}
+
+
 .button-wrapper {
 	display: flex;
 	justify-content: center;
-	padding-top: 64px;
+	padding-top: 45px;
 }
 
 .button {
@@ -134,7 +177,7 @@ body {
 }
 
 .button:hover {
-	background: #1A00cc;
+	opacity: 70%;
 }
 
 .button:focus {
@@ -184,7 +227,7 @@ body {
 	}
 	
 	.button-wrapper {
-		padding-top: 50px;
+		padding-top: 30px;
 	}
 	
 	.button {
