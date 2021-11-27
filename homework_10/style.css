@@ -138,23 +138,12 @@ body {
 }
 
 .form__text-alert {
+	display: none;
 	font-size: 10px;
 	line-height: 16px;
 	padding-left: 10px;
-}
-
-.form__text-alert_colored {
 	color: #CB2424;
 }
-
-#email-alert,
-#password-alert,
-#text-alert-1,
-#text-alert-2,
-#text-alert-3 {
-	display: none;
-}
-
 
 .button-wrapper {
 	display: flex;
@@ -184,6 +173,77 @@ body {
 	outline: none;
 	border: 2px solid #787878;
 }
+
+/* ---------------------------------------------------------------------- */
+
+.not-email .form__star, .not-email .form__label-input {
+	color: #CB2424;
+}
+
+.not-email .form__input {
+	border: 2px solid #CB2424;
+}
+
+.not-email .form__text-alert_not-email {
+	display: block;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.not-password .form__star, .not-password .form__label-input {
+	color: #CB2424;
+}
+
+.not-password .form__input {
+	border: 2px solid #CB2424;
+}
+
+.not-password .form__text-alert_not-password {
+	display: block;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.not-checkbox .form__star {
+	color: #CB2424;
+}
+
+.not-checkbox .form__text-alert {
+	display: block;
+}
+
+.not-checkbox .form__checkbox-mark {
+	border: 2px solid #CB2424;
+}
+
+/* ---------------------------------------------------------------------- */
+.invalid-email .form__star, .invalid-email .form__label-input {
+	color: #CB2424;
+}
+
+.invalid-email .form__input {
+	border: 2px solid #CB2424;
+}
+
+.invalid-email .form__text-alert_invalid {
+	display: block;
+}
+
+/* ---------------------------------------------------------------------- */
+.invalid-password .form__star, .invalid-password .form__label-input {
+	color: #CB2424;
+}
+
+.invalid-password .form__input {
+	border: 2px solid #CB2424;
+}
+
+.invalid-password .form__text-alert_invalid {
+	display: block;
+}
+
+/* ---------------------------------------------------------------------- */
+
 
 @media (min-width: 769px) {
 
