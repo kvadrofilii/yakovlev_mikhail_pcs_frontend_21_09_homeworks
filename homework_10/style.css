@@ -175,68 +175,30 @@ body {
 
 /* ---------------------------------------------------------------------- */
 
-.not-email .form__star, .not-email .form__label-input {
+.not-email .form__star,
+.not-email .form__label-input,
+.not-password .form__star,
+.not-password .form__label-input,
+.not-checkbox .form__checkbox-star,
+.invalid-email .form__star,
+.invalid-email .form__label-input,
+.invalid-password .form__star,
+.invalid-password .form__label-input {
 	color: #CB2424;
 }
 
-.not-email .form__input {
-	border: 2px solid #CB2424;
-}
-
-.not-email .form__text-alert_not-email {
-	display: block;
-}
-
-/* ---------------------------------------------------------------------- */
-
-.not-password .form__star, .not-password .form__label-input {
-	color: #CB2424;
-}
-
-.not-password .form__input {
-	border: 2px solid #CB2424;
-}
-
-.not-password .form__text-alert_not-password {
-	display: block;
-}
-
-/* ---------------------------------------------------------------------- */
-
-.not-checkbox .form__checkbox-star {
-	color: #CB2424;
-}
-
-.not-checkbox .form__text-alert {
-	display: block;
-}
-
-.not-checkbox .form__checkbox-mark {
-	border: 2px solid #CB2424;
-}
-
-/* ---------------------------------------------------------------------- */
-.invalid-email .form__star, .invalid-email .form__label-input {
-	color: #CB2424;
-}
-
-.invalid-email .form__input {
-	border: 2px solid #CB2424;
-}
-
-.invalid-email .form__text-alert_invalid {
-	display: block;
-}
-
-/* ---------------------------------------------------------------------- */
-.invalid-password .form__star, .invalid-password .form__label-input {
-	color: #CB2424;
-}
-
+.not-email .form__input,
+.not-password .form__input,
+.not-checkbox .form__checkbox-mark,
+.invalid-email .form__input,
 .invalid-password .form__input {
 	border: 2px solid #CB2424;
 }
 
+.not-email .form__text-alert_not,
+.not-password .form__text-alert_not,
+.not-checkbox .form__text-alert,
+.invalid-email .form__text-alert_invalid,
 .invalid-password .form__text-alert_invalid {
 	display: block;
 }

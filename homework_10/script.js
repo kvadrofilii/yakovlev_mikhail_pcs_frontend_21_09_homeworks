@@ -1,6 +1,5 @@
 'use strict';
 
-const form = document.querySelector('form');
 const emailAlert = document.getElementById('email-alert');
 const passwordAlert = document.getElementById('password-alert');
 const checkboxAlert = document.getElementById('checkbox-alert');
