@@ -17,10 +17,8 @@ let isValid = false;
 const button = document.querySelector('.button');
 button.addEventListener('click', (event) => {
   event.preventDefault();
-	emailAlert.classList.remove('not-email');
-	emailAlert.classList.remove('invalid-email');
-	passwordAlert.classList.remove('not-password');
-	passwordAlert.classList.remove('invalid-password');
+	emailAlert.classList.remove('not-email', 'invalid-email');
+	passwordAlert.classList.remove('not-password', 'invalid-password');
 	checkboxAlert.classList.remove('not-checkbox');
 
 	if ( (email === null) || (email === '') || (email === undefined) ) {
