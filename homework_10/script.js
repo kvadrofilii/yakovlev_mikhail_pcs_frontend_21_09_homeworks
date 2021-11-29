@@ -52,13 +52,13 @@ button.addEventListener('click', (event) => {
 	}
 });
 
-const emailInput = document.querySelector('input[id=email-input]');
+const emailInput = document.getElementById('email-input');
 emailInput.addEventListener('input', (event) => {
   event.target.value = event.target.value.replaceAll(' ', '');
 	email = event.target.value;
 });
 
-const passwordInput = document.querySelector('input[id=password-input]');
+const passwordInput = document.getElementById('password-input');
 passwordInput.addEventListener('input', (event) => {
   event.target.value = event.target.value.replaceAll(' ', '');
 	password = event.target.value;
