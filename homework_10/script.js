@@ -7,11 +7,6 @@ const checkbox = document.getElementById('checkbox');
 
 let email;
 let password;
-const objectsData = {
-	email: '',
-	password: ''
-};
-let isValid = false;
 
 const button = document.querySelector('.button');
 button.addEventListener('click', (event) => {
@@ -20,35 +15,24 @@ button.addEventListener('click', (event) => {
 	passwordAlert.classList.remove('not-password', 'invalid-password');
 	checkboxAlert.classList.remove('not-checkbox');
 
-	if ( (email === null) || (email === '') || (email === undefined) ) {
+	if (!email) {
 		emailAlert.classList.add('not-email');
-		isValid = false;
 	} else if (!validateEmail(email)) {
 		emailAlert.classList.add('invalid-email');
-		isValid = false;
-	} else {
-		objectsData.email = email;
-		isValid = true;
 	}
 
-	if ( (password === null) || (password === '') || (password === undefined) ) {
+	if (!password) {
 		passwordAlert.classList.add('not-password');
-		isValid = false;
 	} else if (password.length < 8) {
 		passwordAlert.classList.add('invalid-password');
-		isValid = false;
-	} else {
-		objectsData.password = password;
-		isValid = true;
 	}
 
 	if (!checkbox.checked) {
 		checkboxAlert.classList.add('not-checkbox');
-		isValid = false;
 	}
 
-	if (isValid) {
-		console.log(objectsData);
+	if (email && validateEmail(email) && password && (password.length > 7)) {
+		console.log({email, password});
 	}
 });
 
@@ -65,6 +49,7 @@ passwordInput.addEventListener('input', (event) => {
 });
 
 function validateEmail(email) {
-	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	const re =
+	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test(String(email).toLowerCase());
 }
