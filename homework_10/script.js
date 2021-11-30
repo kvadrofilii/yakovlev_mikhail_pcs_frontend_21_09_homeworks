@@ -31,7 +31,7 @@ button.addEventListener('click', (event) => {
 		checkboxAlert.classList.add('not-checkbox');
 	}
 
-	if (email && validateEmail(email) && password && (password.length > 7)) {
+	if (email && validateEmail(email) && password && (password.length > 7) && checkbox.checked) {
 		console.log({email, password});
 	}
 });
