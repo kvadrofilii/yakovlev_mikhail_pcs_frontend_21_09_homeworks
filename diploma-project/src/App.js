@@ -1,11 +1,14 @@
 import './App.scss';
-import './components/button/button.js'
-import Button from './components/button/button.js';
+import Container from './components/Container/Container.js';
+import Button from './components/Button/Button.js';
+
 
 function App() {
   return (
     <div className='App'>
-      <Button url='/' class='button button_big button_colored' text='Вход' />
+      <Container>
+        <Button url='/' className='button button_big button_colored' text='Вход' />
+      </Container>
     </div>
   );
 }
