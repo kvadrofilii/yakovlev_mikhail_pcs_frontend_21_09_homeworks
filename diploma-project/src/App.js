@@ -1,25 +1,11 @@
 import './App.scss';
+import './components/button/button.js'
+import Button from './components/button/button.js';
 
 function App() {
   return (
     <div className='App'>
-      <div className='button-wrapper'>
-        <a href="" class="button">Войти</a>
-      </div>
-      {/*<header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>*/}
+      <Button url='/' class='button button_big button_colored' text='Вход' />
     </div>
   );
 }
