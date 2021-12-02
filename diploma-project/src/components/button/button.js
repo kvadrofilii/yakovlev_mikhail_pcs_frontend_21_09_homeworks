@@ -1,11 +1,5 @@
-//import '../../scss/main.scss';
-
 function Button(props) {
-	return (
-		//<div>
-		<a href={props.url} className={props.class}>{props.text}</a>
-		//</div>
-	);
+	return <a href={props.url} className={props.class}>{props.text}</a>;
 }
 
 export default Button;
