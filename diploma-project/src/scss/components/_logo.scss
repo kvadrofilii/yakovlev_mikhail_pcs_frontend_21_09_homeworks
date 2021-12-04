@@ -1,16 +1,39 @@
 .logo-wrapper {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .logo {
+	height: 60px;
+	width: 60px;
 	background-image: url(../../assets/svg/logo.svg);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 
-.logo-text {
+.logo-main.logo {
+	height: 40px;
+	width: 40px;
+	transition: all 0.3s ease;
+
+	@media (min-width: $tablet-width) {
+		height: 60px;
+		width: 60px;
+	}
+}
+
+.logo__text {
 	margin-left: 20px;
 	font-weight: 500;
 	font-size: 22px;
+}
+
+.logo-main.logo__text {
+	display: none;
+
+	@media (min-width: $tablet-width) {
+		display: block;
+	}
 }
