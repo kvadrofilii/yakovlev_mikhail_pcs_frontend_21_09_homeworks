@@ -11,7 +11,7 @@
 @import "base/base", "base/typography";
 
 // 4. Layout-related sections
-@import "layout/container", "layout/header", "layout/footer", "layout/header-welcome";
+@import "layout/container", "layout/header-welcome", "layout/header-main", "layout/footer";
 
 // 5. Components
 @import "components/button", "components/inputs", "components/h1", "components/logo";

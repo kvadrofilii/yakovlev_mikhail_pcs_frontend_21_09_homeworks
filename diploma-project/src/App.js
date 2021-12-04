@@ -3,6 +3,7 @@ import Container from './components/Container/Container';
 import Button from './components/Button/Button';
 import H1 from './components/H1/H1';
 import HeaderWelcome from './components/HeaderWelcome/HeaderWelcome';
+//import HeaderMain from './components/HeaderMain/HeaderMain';
 import Input from './components/Inputs/Inputs';
 
 
