@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	min-height: 550px;
+	min-width: 320px;
+	margin: 0;
+	background: #1B2473;
+	font-family: 'Roboto', Verdana, sans-serif;
+	color: #787878;
+}
+
+.container {
+	height: 100%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.form {
+	height: 100%;
+	padding: 38px 45px 45px;
+	background: #fff;
+	border-radius: 20px;
+}
+
+.form__title {
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 60px;
+	text-align: center;
+}
+
+.form__input-wrapper {
+	padding-top: 10px;
+	position: relative;
+}
+
+.form__input {
+	width: 100%;
+	height: 49px;
+	border: 2px solid #787878;
+	border-radius: 10px;
+	padding: 0 15px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 36px;
+	color: #787878;
+}
+
+.form__input:focus {
+	outline: none;
+	border: 2px solid blue;
+}
+
+.form__input::placeholder {
+	color: #ccc;
+}
+
+.form__label-input {
+	padding: 3px 8px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: #787878;
+}
+
+.form__checkbox-wrapper {
+	margin-top: 19px;
+	position: relative;
+}
+
+.form__checkbox-wrapper_flex {
+	display: flex;
+	align-items: center;
+}
+
+.form__checkbox-wrapper_fit {
+	position: relative;
+}
+
+.form__checkbox {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.form__checkbox-mark {
+	width: 32px;
+	height: 32px;
+	flex-shrink: 0;
+	border: 2px solid #787878;
+	border-radius: 7px;
+}
+
+.form__checkbox:checked + .form__checkbox-mark::after {
+	content: '✓';
+	position: absolute;
+	color: #787878;
+	left: 6px;
+	font-size: 24px;
+}
+
+.form__checkbox-label {
+	padding-left: 10px;
+	font-size: 18px;
+	color: #787878;
+}
+
+.form__checkbox-label a {
+	color: #787878;
+}
+
+.form__star {
+	position: absolute;
+	left: -14px;
+	top: 40px;
+	font-size: 18px;
+}
+
+.form__checkbox-star {
+	position: absolute;
+	left: -14px;
+	font-size: 18px;
+}
+
+.form__text-alert {
+	display: none;
+	font-size: 10px;
+	line-height: 16px;
+	padding-left: 10px;
+	color: #CB2424;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	padding-top: 45px;
+}
+
+.button {
+	width: 220px;
+	height: 80px;
+	background: #1A226B;
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	transition: .2s all;
+}
+
+.button:hover {
+	opacity: 70%;
+}
+
+.button:focus {
+	outline: none;
+	border: 2px solid #787878;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.not-email .form__star,
+.not-email .form__label-input,
+.not-password .form__star,
+.not-password .form__label-input,
+.not-checkbox .form__checkbox-star,
+.invalid-email .form__star,
+.invalid-email .form__label-input,
+.invalid-password .form__star,
+.invalid-password .form__label-input {
+	color: #CB2424;
+}
+
+.not-email .form__input,
+.not-password .form__input,
+.not-checkbox .form__checkbox-mark,
+.invalid-email .form__input,
+.invalid-password .form__input {
+	border: 2px solid #CB2424;
+}
+
+.not-email .form__text-alert_not,
+.not-password .form__text-alert_not,
+.not-checkbox .form__text-alert,
+.invalid-email .form__text-alert_invalid,
+.invalid-password .form__text-alert_invalid {
+	display: block;
+}
+
+/* ---------------------------------------------------------------------- */
+
+
+@media (min-width: 769px) {
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.form {
+		width: 600px;
+		height: 420px;
+		padding: 26px 45px;
+	}
+	
+	.form__title {
+		font-size: 50px;
+		line-height: 50px;
+	}
+	
+	.form__label-input {
+		font-size: 11px;
+	}
+	
+	.form__checkbox-wrapper {
+		margin-top: 11px;
+	}
+	
+	.form__checkbox-mark {
+		width: 24px;
+		height: 24px;
+	}
+
+	.form__checkbox:checked + .form__checkbox-mark::after {
+		left: 6px;
+		font-size: 16px;
+	}
+
+	.form__checkbox-label {
+		font-size: 14px;
+	}
+	
+	.button-wrapper {
+		padding-top: 30px;
+	}
+	
+	.button {
+		width: 180px;
+		height: 52px;
+		font-size: 24px;
+	}
+	
+}
