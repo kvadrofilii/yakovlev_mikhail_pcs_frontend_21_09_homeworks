@@ -1,0 +1,16 @@
+.logo-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	background-image: url(../../assets/svg/logo.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.logo-text {
+	margin-left: 20px;
+	font-weight: 500;
+	font-size: 22px;
+}

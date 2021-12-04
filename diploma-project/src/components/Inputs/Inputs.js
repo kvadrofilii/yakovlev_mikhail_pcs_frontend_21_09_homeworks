@@ -12,7 +12,6 @@ function Input({ type = 'email', placeholder = '' }) {
 
 	if (type === 'email') {
 		before = email;
-		after = error;
 		size = 24;
 	} else if (type === 'password') {
 		before = password;
