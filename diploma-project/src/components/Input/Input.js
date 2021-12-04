@@ -1,7 +1,7 @@
 import email from '../../assets/svg/email.svg';
 import password from '../../assets/svg/password.svg';
 import user from '../../assets/svg/user.svg';
-import error from '../../assets/svg/error.svg';
+//import error from '../../assets/svg/error.svg';
 import eye from '../../assets/svg/eye.svg';
 
 function Input({ type = 'email', placeholder = '' }) {

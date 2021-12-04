@@ -18,7 +18,7 @@ function HeaderWelcome({ enter = 'enter' }) {
 	return (
 		<div className='header-welcome'>
 			<Container className='container'>
-				<div className='header-wrapper'>
+				<div className='header-welcome-wrapper'>
 					<Logo />
 					<div className='enter-wrapper'>
 						<div className='enter-title'>{strTitle}</div>
