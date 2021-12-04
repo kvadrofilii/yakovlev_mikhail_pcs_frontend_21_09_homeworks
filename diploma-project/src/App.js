@@ -14,7 +14,7 @@ function App() {
         <Button url='/' className='button button_big button_colored' text='Вход' />
         <Button url='/' className='button button_small button_colored' text='Вход' />
         <Button url='/' className='button button_outline' text='Вход' />
-        <Input className='input-wrapper' type='mail' placeholder='Введите электронную почту' />
+        <Input className='input-wrapper' type='user' placeholder='Введите электронную почту' />
       </Container>
     </div>
   );
