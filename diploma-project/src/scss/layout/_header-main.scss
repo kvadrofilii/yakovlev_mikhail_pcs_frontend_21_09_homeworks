@@ -1,14 +1,3 @@
-.header-main {
-	padding: 15px 0;
-	background: $color-menu;
-	transition: all 0.3s ease;
-
-	@media (min-width: $tablet-width) {
-		padding: 30px 0;
-		background: $color-background;
-	}
-}
-
 .header-main-wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -39,11 +28,11 @@
 .header__user {
 	display: flex;
 	align-items: center;
-	margin: 0 50px;
+	margin-left: 50px;
 
-	@media (min-width: $tablet-width) {
-		margin-right: 0;
-	}
+	//@media (min-width: $tablet-width) {
+	//	margin-right: 0;
+	//}
 }
 
 .header__avatar {
@@ -61,8 +50,9 @@
 }
 
 .header__name {
-	display: none;
-
+	//display: none;
+	display: block;
+	margin-left: 15px;
 	@media (min-width: $tablet-width) {
 		display: block;
 		margin-left: 15px;

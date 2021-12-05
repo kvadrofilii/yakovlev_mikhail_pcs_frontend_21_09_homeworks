@@ -1,4 +1,5 @@
 import Container from '../Container/Container';
+import Header from '../Header/Header';
 import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
 
@@ -16,7 +17,7 @@ function HeaderWelcome({ enter = 'enter' }) {
 	}
 
 	return (
-		<div className='header-welcome'>
+		<Header>
 			<Container className='container'>
 				<div className='header-welcome-wrapper'>
 					<Logo />
@@ -26,7 +27,7 @@ function HeaderWelcome({ enter = 'enter' }) {
 					</div>
 				</div>
 			</Container>
-		</div>
+		</Header>
 	);
 }
 

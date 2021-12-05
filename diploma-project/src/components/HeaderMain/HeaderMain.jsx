@@ -1,11 +1,11 @@
-import Container from '../Container/Container';
-import Logo from '../Logo/Logo';
+import Container from '../Container/Container.jsx';
+import Header from '../Header/Header.jsx';
+import Logo from '../Logo/Logo.jsx';
 import avatar from '../../assets/img/user-1.jpg';
-import Hamburger from '../Hamburger/Hamburger';
 
 function HeaderMain() {
 	return (
-		<div className='header-main'>
+		<Header>
 			<Container className='container'>
 				<div className='header-main-wrapper'>
 					<Logo className='logo-main' />
@@ -15,11 +15,10 @@ function HeaderMain() {
 							<img className='header__avatar' src={avatar} alt='User avatar' />
 							<span className='header__name'>Иван Иванов</span>
 						</div>
-						<Hamburger />
 					</div>
 				</div>
 			</Container>
-		</div>
+		</Header>
 	);
 }
 

@@ -11,10 +11,10 @@
 @import "base/base", "base/typography";
 
 // 4. Layout-related sections
-@import "layout/container", "layout/header-welcome", "layout/header-main", "layout/footer";
+@import "layout/container", "layout/header", "layout/header-welcome", "layout/header-main", "layout/footer";
 
 // 5. Components
-@import "components/button", "components/input", "components/h1", "components/logo", "components/hamburger";
+@import "components/button", "components/input", "components/h1", "components/logo";
 
 // 6. Page-specific styles
 //@import
