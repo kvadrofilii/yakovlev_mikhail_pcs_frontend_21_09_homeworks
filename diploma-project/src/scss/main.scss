@@ -14,7 +14,8 @@
 @import "layout/container", "layout/header", "layout/header-welcome", "layout/header-main", "layout/footer";
 
 // 5. Components
-@import "components/button", "components/input", "components/h1", "components/logo", "components/gender";
+@import "components/_birth-date", "components/button", "components/gender", "components/h1", "components/input-date",
+	"components/input-month", "components/input", "components/logo";
 
 // 6. Page-specific styles
 //@import
