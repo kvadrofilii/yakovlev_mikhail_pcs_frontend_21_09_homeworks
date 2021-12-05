@@ -2,8 +2,4 @@
 	max-width: $content-width;
 	margin: auto;
 	padding: 0 15px;
-
-	@media (min-width: $tablet-width) {
-		padding: 0 10px;
-	}
 }

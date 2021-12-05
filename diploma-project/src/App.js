@@ -5,7 +5,7 @@ import H1 from './components/H1/H1.jsx';
 //import HeaderWelcome from './components/HeaderWelcome/HeaderWelcome.jsx';
 import HeaderMain from './components/HeaderMain/HeaderMain.jsx';
 //import Input from './components/Inputs/Inputs.jsx';
-
+import Footer from './components/Footer/Footer.jsx';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
 
         <Input className='input-wrapper' type='email' placeholder='Введите электронную почту' />*/}
       </Container>
+      <Footer />
     </div>
   );
 }
