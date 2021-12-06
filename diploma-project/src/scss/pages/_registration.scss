@@ -1,0 +1,34 @@
+.registration__title {
+	font-weight: 500;
+	font-size: 2.8rem;
+	text-align: center;
+	line-height: 150%;
+	margin: 50px 0 10px;
+
+	@media (min-width: $tablet-width) {
+		font-size: 3.6rem;
+	}
+}
+
+.registration__text {
+	text-align: center;
+	margin: 0 auto 30px;
+	color: $color-dark-text;
+
+	@media (min-width: $tablet-width) {
+		margin: 0 auto 50px;
+	}
+}
+
+.registration__form {
+	width: 100%;
+	margin: 0 auto;
+
+	@media (min-width: $tablet-width) {
+		width: 380px;
+	}
+}
+
+.registration__button {
+	margin-top: 20px;
+}

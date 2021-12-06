@@ -42,8 +42,10 @@
 .man.button-gender {
 	background: $color-man;
 	background: $linear-gradient-man;
-	box-shadow: $color-button-shadow;
+	box-shadow: $color-button-shadow-man;
+}
 
+.man.button-gender_colored {
 	&:hover {
 		background: $color-man-hovered;
 		background: $linear-gradient-man-hovered;
@@ -54,7 +56,9 @@
 	background: $color-woman;
 	background: $linear-gradient-woman;
 	box-shadow: $color-button-shadow;
+}
 
+.woman.button-gender_colored {
 	&:hover {
 		background: $color-woman-hovered;
 		background: $linear-gradient-woman-hovered;
@@ -83,6 +87,14 @@
 .man.button-gender_outline {
 	background-clip: text;
 	-webkit-background-clip: text;
+	box-shadow: none;
+
+	&:hover::after {
+		left: 100%;
+		top: 100%;
+		bottom: 100%;
+		right: 100%;
+	}
 
 	&::before {
 		@extend %button;
@@ -109,6 +121,14 @@
 .woman.button-gender_outline {
 	background-clip: text;
 	-webkit-background-clip: text;
+	box-shadow: none;
+
+	&:hover::after {
+		left: 100%;
+		top: 100%;
+		bottom: 100%;
+		right: 100%;
+	}
 
 	&::before {
 		@extend %button;
