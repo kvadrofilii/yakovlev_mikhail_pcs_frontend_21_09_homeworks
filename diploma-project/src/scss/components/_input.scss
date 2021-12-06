@@ -1,12 +1,5 @@
-.input-wrapper {
-	position: relative;
-	display: flex;
-	align-items: center;
-}
-
-.ico-before {
+%ico {
 	position: absolute;
-	left: 30px;
 	height: 20px;
 	width: 20px;
 	background-repeat: no-repeat;
@@ -14,12 +7,12 @@
 	background-size: cover;
 }
 
-.ico-after {
-	position: absolute;
-	right: 30px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+.input-wrapper {
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
 }
 
 .input {
@@ -44,4 +37,34 @@
 
 .input_error.input {
 	box-shadow: inset 0px -2px 0px $color-error;
+}
+
+.email.ico-before {
+	left: 30px;
+	@extend %ico;
+	background-image: url(../../assets/svg/email.svg);
+}
+
+.user.ico-before {
+	left: 30px;
+	@extend %ico;
+	background-image: url(../../assets/svg/user.svg);
+}
+
+.password.ico-before {
+	left: 30px;
+	@extend %ico;
+	background-image: url(../../assets/svg/password.svg);
+}
+
+.input_error.ico-after {
+	right: 30px;
+	@extend %ico;
+	background-image: url(../../assets/svg/error.svg);
+}
+
+.input_eye.ico-after {
+	right: 30px;
+	@extend %ico;
+	background-image: url(../../assets/svg/eye.svg);
 }
