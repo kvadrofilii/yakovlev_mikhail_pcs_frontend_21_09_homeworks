@@ -1,6 +1,6 @@
 function Input({ type = 'text', placeholder = '', icoBefore = '', input = '', icoAfter = '' }) {
 	return (
-		<div>
+		<div className='input-container'>
 			<div className='input-wrapper'>
 				<span className={`input__ico-before ${icoBefore}`}></span>
 				<input className={`input ${input}`} type={type} placeholder={placeholder} />

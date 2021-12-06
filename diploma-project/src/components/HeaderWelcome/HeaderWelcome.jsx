@@ -23,7 +23,7 @@ function HeaderWelcome({ enter = 'enter' }) {
 					<Logo />
 					<div className='enter-wrapper'>
 						<div className='enter-title'>{strTitle}</div>
-						<Button url='/' className='button button_outline' text={strButton} />
+						<Button type='link' url='/' className='button button_outline' text={strButton} />
 					</div>
 				</div>
 			</Container>
