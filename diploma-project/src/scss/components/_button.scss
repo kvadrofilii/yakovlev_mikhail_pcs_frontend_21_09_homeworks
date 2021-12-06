@@ -40,6 +40,7 @@
 
 .button_colored {
 	box-shadow: $color-button-shadow;
+	font-weight: 500;
 
 	&:hover {
 		background: $color-button-hovered;
@@ -50,6 +51,7 @@
 .button_outline {
 	width: 140px;
 	padding: 11px;
+	font-weight: 400;
 	background-clip: text;
 	-webkit-background-clip: text;
 

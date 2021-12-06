@@ -14,7 +14,7 @@
 @import "layout/container", "layout/header", "layout/header-welcome", "layout/header-main", "layout/footer";
 
 // 5. Components
-@import "components/button", "components/gender", "components/input", "components/logo";
+@import "components/button", "components/card", "components/gender", "components/input", "components/logo";
 
 // 6. Page-specific styles
-@import "pages/login", "pages/registration";
+@import "pages/login", "pages/registration", "pages/main";
