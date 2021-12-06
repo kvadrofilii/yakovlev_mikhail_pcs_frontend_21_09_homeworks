@@ -1,4 +1,4 @@
-%ico {
+%input__ico {
 	position: absolute;
 	height: 20px;
 	width: 20px;
@@ -39,32 +39,43 @@
 	box-shadow: inset 0px -2px 0px $color-error;
 }
 
-.email.ico-before {
+.email.input__ico-before {
 	left: 30px;
-	@extend %ico;
+	@extend %input__ico;
 	background-image: url(../../assets/svg/email.svg);
 }
 
-.user.ico-before {
+.user.input__ico-before {
 	left: 30px;
-	@extend %ico;
+	@extend %input__ico;
 	background-image: url(../../assets/svg/user.svg);
 }
 
-.password.ico-before {
+.password.input__ico-before {
 	left: 30px;
-	@extend %ico;
+	@extend %input__ico;
 	background-image: url(../../assets/svg/password.svg);
 }
 
-.input_error.ico-after {
+.input_error.input__ico-after {
 	right: 30px;
-	@extend %ico;
+	@extend %input__ico;
 	background-image: url(../../assets/svg/error.svg);
 }
 
-.input_eye.ico-after {
+.input_eye.input__ico-after {
 	right: 30px;
-	@extend %ico;
+	@extend %input__ico;
 	background-image: url(../../assets/svg/eye.svg);
+}
+
+.input__text-alert {
+	display: none;
+	margin-left: 30px;
+	padding-bottom: 10px;
+	color: $color-error;
+}
+
+.input_error.input__text-alert {
+	display: block;
 }

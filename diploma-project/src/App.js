@@ -23,6 +23,7 @@ function App() {
         </div>*/}
         {/*<Button url='/' className='button button_big button_colored' text='Вход' />*/}
         <Input type='text' placeholder='Ваше имя' icoBefore='user' input='' icoAfter='' />
+        <Input type='text' placeholder='Ваша фамилия' icoBefore='user' input='' icoAfter='' />
         <Input type='text' placeholder='Ваш возраст' icoBefore='user' input='' icoAfter='' />
         <Input type='email' placeholder='Введите электронную почту' icoBefore='email' input='input_error' icoAfter='input_error' />
         <Input type='password' placeholder='Введите пароль' icoBefore='password' input='' icoAfter='input_eye' />
