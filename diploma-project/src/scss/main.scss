@@ -15,7 +15,7 @@
 
 // 5. Components
 @import "components/button", "components/card", "components/gender", "components/input", "components/logo",
-	"components/photo-profile";
+	"components/photo-profile", "components/edit-photo-profile";
 
 // 6. Page-specific styles
-@import "pages/login", "pages/registration", "pages/main", "pages/profile";
+@import "pages/login", "pages/registration", "pages/main", "pages/profile", "pages/profile-setting";
