@@ -6,6 +6,7 @@
 	border-radius: 40px;
 	border: none;
 	font-size: 1.6rem;
+	line-height: 150%;
 	text-decoration: none;
 	color: $color-text;
 	text-align: center;
@@ -13,7 +14,7 @@
 	background: $color-button;
 	background: $linear-gradient;
 	flex-shrink: 0;
-	margin: 0 auto;
+	cursor: pointer;
 
 	&:active {
 		background: $color-active;
@@ -81,5 +82,14 @@
 		right: 1px;
 		z-index: -1;
 		background: $color-background;
+	}
+}
+
+.button_big.button_outline {
+	width: 100%;
+	margin: 20px 0;
+
+	@media (min-width: $tablet-width) {
+		width: 140px;
 	}
 }
