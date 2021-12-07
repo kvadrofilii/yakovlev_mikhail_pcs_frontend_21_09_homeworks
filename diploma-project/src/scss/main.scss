@@ -11,11 +11,11 @@
 @import "base/base", "base/typography";
 
 // 4. Layout-related sections
-@import "layout/container", "layout/header", "layout/header-welcome", "layout/header-main", "layout/footer";
+@import "layout/container", "layout/header", "layout/footer";
 
 // 5. Components
-@import "components/button", "components/card", "components/gender", "components/input", "components/logo",
-	"components/photo-profile", "components/edit-photo-profile";
+@import "components/button", "components/card", "components/edit-photo-profile", "components/gender", "components/input",
+	"components/logo", "components/photo-profile";
 
 // 6. Page-specific styles
-@import "pages/login", "pages/registration", "pages/main", "pages/profile", "pages/profile-setting";
+@import "pages/login", "pages/main", "pages/profile-setting", "pages/profile", "pages/registration";

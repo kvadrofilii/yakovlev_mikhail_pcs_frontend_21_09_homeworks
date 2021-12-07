@@ -1,11 +1,10 @@
 import Container from '../Container/Container.jsx';
-import Header from '../Header/Header.jsx';
 import Logo from '../Logo/Logo.jsx';
 import avatar from '../../assets/img/user-1.jpg';
 
 function HeaderMain() {
 	return (
-		<Header>
+		<div className='header'>
 			<Container className='container'>
 				<div className='header-main-wrapper'>
 					<Logo className='logo-main' />
@@ -18,7 +17,7 @@ function HeaderMain() {
 					</div>
 				</div>
 			</Container>
-		</Header>
+		</div>
 	);
 }
 
