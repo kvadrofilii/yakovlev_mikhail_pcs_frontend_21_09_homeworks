@@ -22,17 +22,22 @@ function ProfileSetting() {
 
 						<div className='profile-setting__inputs'>
 							<span className='profile-setting__name'>Имя</span>
-							<Input type='text' placeholder='Ваше имя' value='Jessie' icoBefore='user' input='' icoAfter='' />
+							<Input type='text' placeholder='Ваше имя' value='Jessie' icoBefore='' input='' icoAfter='' />
 						</div>
 
 						<div className='profile-setting__inputs'>
 							<span className='profile-setting__name'>Фамилия</span>
-							<Input type='text' placeholder='Ваша фамилия' value='Rogers' icoBefore='user' input='' icoAfter='' />
+							<Input type='text' placeholder='Ваша фамилия' value='Rogers' icoBefore='' input='' icoAfter='' />
 						</div>
 
 						<div className='profile-setting__inputs'>
 							<span className='profile-setting__name'>Возраст</span>
-							<Input type='text' placeholder='Ваш возраст' icoBefore='user' input='input_error' icoAfter='input_error' />
+							<Input type='text' placeholder='Ваш возраст' icoBefore='ser' input='input_error' icoAfter='input_error' />
+						</div>
+
+						<div className='profile-setting__inputs'>
+							<span className='profile-setting__name'>О себе</span>
+							<Input type='textarea' placeholder='Напишите о себе' value='' input='' icoAfter='' />
 						</div>
 
 						<div className='profile-setting__inputs'>
@@ -47,12 +52,12 @@ function ProfileSetting() {
 
 						<div className='profile-setting__inputs'>
 							<span className='profile-setting__name'>E-mail</span>
-							<Input type='email' placeholder='Введите e-mail' icoBefore='email' input='' icoAfter='' />
+							<Input type='email' placeholder='Введите e-mail' icoBefore='' input='' icoAfter='' />
 						</div>
 
 						<div className='profile-setting__inputs'>
 							<span className='profile-setting__name'>Пароль</span>
-							<Input type='password' placeholder='Введите пароль' icoBefore='password' input='' icoAfter='input_eye' />
+							<Input type='password' placeholder='Введите пароль' icoBefore='' input='' icoAfter='input_eye' />
 						</div>
 
 						<div className='profile-setting__button'>
