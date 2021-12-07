@@ -1,5 +1,11 @@
-function PhotoProfile({ url = '', alt = '' }) {
-	return <img className='photo-profile' src={url} alt={alt} />;
+function PhotoProfile({ url = '' }) {
+	if (url) {
+		return <div className='photo-profile' style={{
+			backgroundImage: `url(${url})`
+		}} />;
+	} else {
+		return <div className='photo-profile' />;
+	}
 }
 
 export default PhotoProfile;
