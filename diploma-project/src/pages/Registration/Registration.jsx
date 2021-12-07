@@ -21,7 +21,7 @@ function Registration() {
 						<Gender gender='man' isCondition='true' />
 						<Gender gender='woman' isCondition='false' />
 					</div>
-					<Input type='email' placeholder='Введите электронную почту' icoBefore='email' input='' icoAfter='' />
+					<Input type='email' placeholder='Введите e-mail' icoBefore='email' input='' icoAfter='' />
 					<Input type='password' placeholder='Введите пароль' icoBefore='password' input='' icoAfter='input_eye' />
 					<Button type='button' url='/' className='button button_big button_colored registration__button' text='Создать аккаунт' />
 				</form>
