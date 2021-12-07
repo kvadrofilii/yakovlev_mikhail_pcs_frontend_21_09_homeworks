@@ -15,7 +15,7 @@ function Input({ type = 'text', placeholder = '', value = '', icoBefore = '', in
 			<div className='input-container'>
 				<div className='input-wrapper'>
 					<span className={`input__ico-before ${icoBefore}`}></span>
-					<input className={`input ${input}`} type={type} placeholder={placeholder} value={value} />
+					<input className={`input ${input}`} type={type} placeholder={placeholder} defaultValue={value} />
 					<span className={`input__ico-after ${icoAfter}`}></span >
 				</div>
 				<div className={`input__text-alert ${input}`}>Поле обязательно для заполнения</div>
