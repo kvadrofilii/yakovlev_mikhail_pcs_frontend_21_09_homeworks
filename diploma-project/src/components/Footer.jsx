@@ -1,4 +1,4 @@
-import Container from '../Container/Container.jsx';
+import Container from './Container.jsx';
 
 function Footer() {
 	return (

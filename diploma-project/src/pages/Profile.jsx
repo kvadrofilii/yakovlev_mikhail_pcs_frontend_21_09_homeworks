@@ -1,9 +1,9 @@
-import Container from '../../components/Container/Container.jsx';
-import Header from '../../components/Header/Header.jsx';
-import Button from '../../components/Button/Button.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
-import PhotoProfile from '../../components/PhotoProfile/PhotoProfile.jsx';
-import photo from '../../assets/img/users/woman/1.jpg';
+import Container from '../components/Container.jsx';
+import Header from '../components/Header.jsx';
+import Button from '../components/Button.jsx';
+import Footer from '../components/Footer.jsx';
+import PhotoProfile from '../components/PhotoProfile.jsx';
+import photo from '../assets/img/users/woman/1.jpg';
 
 
 function Profile() {

@@ -1,7 +1,7 @@
-import Container from '../../components/Container/Container.jsx';
-import Header from '../../components/Header/Header.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
-import Button from '../../components/Button/Button.jsx';
+import Container from '../components/Container.jsx';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
+import Button from '../components/Button.jsx';
 
 function Page404() {
 	return (

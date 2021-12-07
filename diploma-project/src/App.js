@@ -1,10 +1,11 @@
 import './App.scss';
-import Login from './pages/Login/Login.jsx';
-import Main from './pages/Main/Main.jsx';
-import Page404 from './pages/Page404/Page404.jsx';
-import Profile from './pages/Profile/Profile.jsx';
-import ProfileSetting from './pages/ProfileSetting/ProfileSetting.jsx';
-import Registration from './pages/Registration/Registration.jsx';
+import Login from './pages/Login.jsx';
+import Main from './pages/Main.jsx';
+import Page404 from './pages/Page404.jsx';
+import Privacy from './pages/Privacy';
+import Profile from './pages/Profile.jsx';
+import ProfileSetting from './pages/ProfileSetting.jsx';
+import Registration from './pages/Registration.jsx';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       {/*<Main />*/}
       {/*<Profile />*/}
       {/*<ProfileSetting />*/}
+      <Privacy />
       {/*<Page404 />*/}
 
     </div >

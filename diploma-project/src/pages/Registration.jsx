@@ -1,9 +1,9 @@
-import Container from '../../components/Container/Container.jsx';
-import Button from '../../components/Button/Button.jsx';
-import Header from '../../components/Header/Header.jsx';
-import Input from '../../components/Input/Input.jsx';
-import Gender from '../../components/Gender/Gender.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
+import Container from '../components/Container.jsx';
+import Button from '../components/Button.jsx';
+import Header from '../components/Header.jsx';
+import Input from '../components/Input.jsx';
+import Gender from '../components/Gender.jsx';
+import Footer from '../components/Footer.jsx';
 
 
 function Registration() {

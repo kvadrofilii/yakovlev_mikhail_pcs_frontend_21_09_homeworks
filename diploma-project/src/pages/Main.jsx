@@ -1,7 +1,7 @@
-import Container from '../../components/Container/Container.jsx';
-import Header from '../../components/Header/Header.jsx';
-import Card from '../../components/Card/Card.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
+import Container from '../components/Container.jsx';
+import Header from '../components/Header.jsx';
+import Card from '../components/Card.jsx';
+import Footer from '../components/Footer.jsx';
 
 function Main() {
 	return (

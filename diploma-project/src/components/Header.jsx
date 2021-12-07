@@ -1,7 +1,7 @@
-import Container from '../Container/Container.jsx';
-import Logo from '../Logo/Logo.jsx';
-import avatar from '../../assets/img/user-1.jpg';
-import Button from '../Button/Button.jsx';
+import Container from './Container.jsx';
+import Logo from './Logo.jsx';
+import avatar from '../assets/img/user-1.jpg';
+import Button from './Button.jsx';
 
 function Header({ page = 'login' }) {
 

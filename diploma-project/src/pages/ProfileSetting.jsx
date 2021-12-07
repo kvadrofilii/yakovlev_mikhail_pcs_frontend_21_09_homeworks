@@ -1,11 +1,11 @@
-import Container from '../../components/Container/Container.jsx';
-import Header from '../../components/Header/Header.jsx';
-import Button from '../../components/Button/Button.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
-import EditPhotoProfile from '../../components/EditPhotoProfile/EditPhotoProfile.jsx';
-import photo from '../../assets/img/users/woman/1.jpg';
-import Input from '../../components/Input/Input.jsx';
-import Gender from '../../components/Gender/Gender.jsx';
+import Container from '../components/Container.jsx';
+import Header from '../components/Header.jsx';
+import Button from '../components/Button.jsx';
+import Footer from '../components/Footer.jsx';
+import EditPhotoProfile from '../components/EditPhotoProfile.jsx';
+import photo from '../assets/img/users/woman/1.jpg';
+import Input from '../components/Input.jsx';
+import Gender from '../components/Gender.jsx';
 
 
 function ProfileSetting() {

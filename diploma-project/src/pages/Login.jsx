@@ -1,8 +1,8 @@
-import Header from '../../components/Header/Header.jsx';
-import Container from '../../components/Container/Container.jsx';
-import Input from '../../components/Input/Input.jsx';
-import Button from '../../components/Button/Button.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
+import Header from '../components/Header.jsx';
+import Container from '../components/Container.jsx';
+import Input from '../components/Input.jsx';
+import Button from '../components/Button.jsx';
+import Footer from '../components/Footer.jsx';
 
 function Login() {
 	return (
