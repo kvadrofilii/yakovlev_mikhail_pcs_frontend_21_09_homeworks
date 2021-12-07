@@ -8,6 +8,11 @@
 
 .input-container {
 	margin: 20px 0;
+	width: 100%;
+
+	@media (min-width: $tablet-width) {
+		width: 380px;
+	}
 }
 
 .input-wrapper {
