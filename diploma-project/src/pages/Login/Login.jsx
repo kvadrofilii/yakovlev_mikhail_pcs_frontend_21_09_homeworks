@@ -1,13 +1,13 @@
-import HeaderWelcome from './components/HeaderWelcome/HeaderWelcome.jsx';
-import Container from './components/Container/Container.jsx';
-import Input from './components/Input/Input.jsx';
-import Button from './components/Button/Button.jsx';
-import Footer from './components/Footer/Footer.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Container from '../../components/Container/Container.jsx';
+import Input from '../../components/Input/Input.jsx';
+import Button from '../../components/Button/Button.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
 function Login() {
 	return (
 		<div>
-			<HeaderWelcome enter='enter' />
+			<Header page='login' />
 			<Container>
 				<h1 className='login__title'>Знакомства без преград</h1>
 				<p className='login__text'>Для современного мира сплочённость команды профессионалов однозначно фиксирует необходимость системы обучения кадров, соответствующей насущным потребностям.</p>

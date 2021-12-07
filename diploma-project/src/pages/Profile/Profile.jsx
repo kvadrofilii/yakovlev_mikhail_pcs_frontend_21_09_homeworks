@@ -1,15 +1,15 @@
-import Container from './components/Container/Container.jsx';
-import HeaderMain from './components/HeaderMain/HeaderMain.jsx';
-import Button from './components/Button/Button.jsx';
-import Footer from './components/Footer/Footer.jsx';
-import PhotoProfile from './components/PhotoProfile/PhotoProfile.jsx';
-import photo from './assets/img/users/woman/1.jpg';
+import Container from '../../components/Container/Container.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Button from '../../components/Button/Button.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
+import PhotoProfile from '../../components/PhotoProfile/PhotoProfile.jsx';
+import photo from '../../assets/img/users/woman/1.jpg';
 
 
 function Profile() {
 	return (
 		<div>
-			<HeaderMain />
+			<Header page='main' />
 			<Container>
 				<Button type='link' url='/' className='button button_outline button_big' text='Назад' />
 				<div className='profile-wrapper'>

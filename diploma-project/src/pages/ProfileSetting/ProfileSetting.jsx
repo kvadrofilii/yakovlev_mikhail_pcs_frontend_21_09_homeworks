@@ -1,17 +1,17 @@
-import Container from './components/Container/Container.jsx';
-import HeaderMain from './components/HeaderMain/HeaderMain.jsx';
-import Button from './components/Button/Button.jsx';
-import Footer from './components/Footer/Footer.jsx';
-import EditPhotoProfile from './components/EditPhotoProfile/EditPhotoProfile.jsx';
-import photo from './assets/img/users/woman/1.jpg';
-import Input from './components/Input/Input.jsx';
-import Gender from './components/Gender/Gender.jsx';
+import Container from '../../components/Container/Container.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Button from '../../components/Button/Button.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
+import EditPhotoProfile from '../../components/EditPhotoProfile/EditPhotoProfile.jsx';
+import photo from '../../assets/img/users/woman/1.jpg';
+import Input from '../../components/Input/Input.jsx';
+import Gender from '../../components/Gender/Gender.jsx';
 
 
 function ProfileSetting() {
 	return (
 		<div>
-			<HeaderMain />
+			<Header page='main' />
 			<Container>
 				<Button type='link' url='/' className='button button_outline button_big' text='Назад' />
 				<div className='profile-setting-wrapper'>

@@ -1,15 +1,15 @@
-import Container from './components/Container/Container.jsx';
-import Button from './components/Button/Button.jsx';
-import HeaderWelcome from './components/HeaderWelcome/HeaderWelcome.jsx';
-import Input from './components/Input/Input.jsx';
-import Gender from './components/Gender/Gender.jsx';
-import Footer from './components/Footer/Footer.jsx';
+import Container from '../../components/Container/Container.jsx';
+import Button from '../../components/Button/Button.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Input from '../../components/Input/Input.jsx';
+import Gender from '../../components/Gender/Gender.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
 
 function Registration() {
 	return (
 		<div>
-			<HeaderWelcome enter='registration' />
+			<Header enter='registration' />
 			<Container>
 				<h1 className='registration__title'>Создай новый аккаунт</h1>
 				<p className='registration__text'>Присоединяйся к сообществу из 518 млн человек!</p>
