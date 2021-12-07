@@ -4,26 +4,25 @@ const emailAlert = document.getElementById('email-alert');
 const passwordAlert = document.getElementById('password-alert');
 const checkboxAlert = document.getElementById('checkbox-alert');
 const checkbox = document.getElementById('checkbox');
-
-let email;
-let password;
-
 const button = document.querySelector('.button');
+
 button.addEventListener('click', (event) => {
 	event.preventDefault();
+	const emailInput = document.getElementById('email-input').value;
+	const passwordInput = document.getElementById('password-input').value;
 
-	if (!email) {
+	if (!emailInput) {
 		emailAlert.classList.add('not-email');
-	} else if (!validateEmail(email)) {
+	} else if (!validateEmail(emailInput)) {
 		emailAlert.classList.add('invalid-email');
 		emailAlert.classList.remove('not-email');
 	} else {
 		emailAlert.classList.remove('invalid-email');
 	}
 
-	if (!password) {
+	if (!passwordInput) {
 		passwordAlert.classList.add('not-password');
-	} else if (password.length < 8) {
+	} else if (passwordInput.length < 8) {
 		passwordAlert.classList.add('invalid-password');
 		passwordAlert.classList.remove('not-password');
 	} else {
@@ -36,21 +35,9 @@ button.addEventListener('click', (event) => {
 		checkboxAlert.classList.remove('not-checkbox');
 	}
 
-	if (email && validateEmail(email) && password && (password.length > 7) && checkbox.checked) {
-		console.log({ email, password });
+	if (emailInput && validateEmail(emailInput) && passwordInput && (passwordInput.length > 7) && checkbox.checked) {
+		console.log({ emailInput, passwordInput });
 	}
-});
-
-const emailInput = document.getElementById('email-input');
-emailInput.addEventListener('input', (event) => {
-	event.target.value = event.target.value.replaceAll(' ', '');
-	email = event.target.value;
-});
-
-const passwordInput = document.getElementById('password-input');
-passwordInput.addEventListener('input', (event) => {
-	event.target.value = event.target.value.replaceAll(' ', '');
-	password = event.target.value;
 });
 
 function validateEmail(email) {
