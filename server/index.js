@@ -5,6 +5,7 @@ const config = require('config');
 const app = express();
 const PORT = config.get('serverPort');
 
+app.use(express.json())
 app.use('/api/auth', require('./routes/auth.routers.js'));
 
 async function start() {
