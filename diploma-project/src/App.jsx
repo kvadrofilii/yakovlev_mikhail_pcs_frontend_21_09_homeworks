@@ -1,4 +1,3 @@
-import './App.scss';
 import Login from './pages/Login.jsx';
 import Main from './pages/Main.jsx';
 import Page404 from './pages/Page404.jsx';
@@ -17,7 +16,7 @@ function App() {
       {/*<Main />*/}
       {/*<Profile />*/}
       {/*<ProfileSetting />*/}
-      <Privacy />
+      {/*<Privacy />*/}
       {/*<Page404 />*/}
 
     </div >
