@@ -12,14 +12,14 @@ function App() {
   return (
     <div className='App'>
 
+      {/*<Test />*/}
       {/*<Login />*/}
-      <Test />
       {/*<Registration />*/}
-      {/*<Main />*/}
-      {/*<Profile />*/}
-      {/*<ProfileSetting />*/}
-      {/*<Privacy />*/}
-      {/*<Page404 />*/}
+      <Main />
+      {/*<Profile />
+      <ProfileSetting />
+      <Privacy />
+      <Page404 />*/}
 
     </div >
   );
