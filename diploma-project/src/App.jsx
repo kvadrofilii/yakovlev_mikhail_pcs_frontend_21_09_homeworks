@@ -13,24 +13,17 @@ import Registration from './pages/Registration.jsx';
 import Test from './pages/Test.jsx';
 
 // TODO: del prod
-//const auth = false;
-const token = false;
+const token = true;
 
 function App() {
   return (
     <Routes>
       <Route path={'/'} element={<Layout />}>
 
-        <Route index element={
-
-          <RequireAuth token={token}>
-            <Route path={'persons'} element={<PersonsLayout />} >
-              <Route index element={<Persons />} />
-              <Route path={':userId'} element={<Person />} />
-            </Route>
-
-          </RequireAuth>
-        }>
+        <Route index element={<Login />} />
+        <Route path={'persons'} element={<PersonsLayout />} >
+          <Route index element={<Persons />} />
+          <Route path={':userId'} element={<Person />} />
           {/*<Route path={':userId'} element={<PersonSetting />} />*/}
         </Route>
 
@@ -47,3 +40,18 @@ function App() {
 }
 
 export default App;
+
+
+{/*<Route index element={
+  <RequireAuth token={token}>
+
+    <Route path={'persons'} element={<PersonsLayout />} >
+      <Route index element={<Persons />} />
+      <Route path={':userId'} element={<Person />} />
+      <Route path={':userId'} element={<PersonSetting />} />
+    </Route>
+  </RequireAuth>
+}>
+</Route>*/}
+
+{/*<Route path={'login'} element={<Login />} />*/ }

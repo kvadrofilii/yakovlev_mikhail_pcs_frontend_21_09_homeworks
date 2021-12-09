@@ -12,7 +12,7 @@ function Header({ page = 'login' }) {
 						<Logo auth={false} />
 						<div className='header__enter-wrapper'>
 							<div className='header__title'>Впервые здесь?</div>
-							<Button type='link' url='/' className='button button_outline' text='Регистрация' />
+							<Button type='link' url='registration' className='button button_outline' text='Регистрация' />
 						</div>
 					</div>
 				</div>
@@ -26,7 +26,7 @@ function Header({ page = 'login' }) {
 						<Logo auth={false} />
 						<div className='header__enter-wrapper'>
 							<div className='header__title'>Уже есть аккаунт?</div>
-							<Button type='link' url='registration' className='button button_outline' text='Войти' />
+							<Button type='link' url='login' className='button button_outline' text='Войти' />
 						</div>
 					</div>
 				</div>
