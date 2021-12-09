@@ -4,13 +4,12 @@
 	justify-content: center;
 }
 
-.logo {
+.logo__ico {
 	height: 60px;
 	width: 60px;
 	background-image: url(../../assets/svg/logo.svg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
 }
 
 .logo-main.logo {
@@ -28,6 +27,12 @@
 	margin-left: 20px;
 	font-weight: 500;
 	font-size: 22px;
+	color: $color-text;
+	text-decoration: none;
+
+	&:visited {
+		color: $color-text;
+	}
 }
 
 .logo-main.logo__text {

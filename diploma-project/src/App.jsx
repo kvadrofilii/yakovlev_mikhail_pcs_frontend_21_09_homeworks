@@ -1,27 +1,48 @@
+import { Routes, Route } from "react-router-dom";
+import Layout from "./layouts/Layout.jsx";
+import RequireAuth from "./pages/RequireAuth.jsx";
+//import AuthLayout from "./layouts/AuthLayout.jsx";
+import PersonsLayout from "./layouts/PersonsLayout.jsx";
 import Login from './pages/Login.jsx';
-import Main from './pages/Main.jsx';
+import Persons from './pages/Persons.jsx';
 import Page404 from './pages/Page404.jsx';
 import Privacy from './pages/Privacy';
-import Profile from './pages/Profile.jsx';
-import ProfileSetting from './pages/ProfileSetting.jsx';
+import Person from './pages/Person.jsx';
+import PersonSetting from './pages/PersonSetting.jsx';
 import Registration from './pages/Registration.jsx';
 import Test from './pages/Test.jsx';
 
+// TODO: del prod
+//const auth = false;
+const token = false;
 
 function App() {
   return (
-    <div className='App'>
+    <Routes>
+      <Route path={'/'} element={<Layout />}>
 
-      {/*<Test />*/}
-      {/*<Login />*/}
-      {/*<Registration />*/}
-      <Main />
-      {/*<Profile />
-      <ProfileSetting />
-      <Privacy />
-      <Page404 />*/}
+        <Route index element={
 
-    </div >
+          <RequireAuth token={token}>
+            <Route path={'persons'} element={<PersonsLayout />} >
+              <Route index element={<Persons />} />
+              <Route path={':userId'} element={<Person />} />
+            </Route>
+
+          </RequireAuth>
+        }>
+          {/*<Route path={':userId'} element={<PersonSetting />} />*/}
+        </Route>
+
+        <Route path={'login'} element={<Login />} />
+        <Route path={'registration'} element={<Registration />} />
+        <Route path={'privacy'} element={<Privacy />} />
+        <Route path={'*'} element={<Page404 />} />
+
+        <Route path={'test'} element={<Test />} />
+
+      </Route>
+    </Routes>
   );
 }
 
