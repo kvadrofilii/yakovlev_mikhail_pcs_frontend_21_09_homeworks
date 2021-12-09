@@ -1,4 +1,4 @@
-.profile-setting-wrapper {
+.person-setting-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -8,7 +8,7 @@
 	}
 }
 
-.profile-setting__form {
+.person-setting__form {
 	width: 100%;
 
 	@media (min-width: $tablet-width) {
@@ -17,7 +17,7 @@
 	}
 }
 
-.profile-setting__title {
+.person-setting__title {
 	font-weight: 500;
 	font-size: 1.8rem;
 	padding-top: 20px;
@@ -27,7 +27,7 @@
 	}
 }
 
-.profile-setting__inputs {
+.person-setting__inputs {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
@@ -37,7 +37,7 @@
 	}
 }
 
-.profile-setting__name {
+.person-setting__name {
 	width: 100%;
 	padding-top: 20px;
 	flex-shrink: 0;
@@ -50,11 +50,11 @@
 	}
 }
 
-.profile-setting__inputs .input {
+.person-setting__inputs .input {
 	padding: 23px 35px;
 }
 
-.profile-setting__gender {
+.person-setting__gender {
 	width: 100%;
 	margin: 20px 0;
 	display: flex;
@@ -65,7 +65,7 @@
 	}
 }
 
-.profile-setting__button {
+.person-setting__button {
 	display: flex;
 	justify-content: end;
 }

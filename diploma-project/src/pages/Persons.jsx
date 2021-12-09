@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import Container from '../components/Container.jsx';
-import Header from '../components/Header.jsx';
 import Card from '../components/Card.jsx';
-import Footer from '../components/Footer.jsx';
 
-function Main() {
+function Persons() {
 
+	// TODO: del prod
 	const [cards] = useState([
 		{
 			"id": 11,
@@ -71,19 +69,15 @@ function Main() {
 
 	return (
 		<div>
-			<Header page='main' />
-			<Container>
-				<h2 className='main__sort'>Сортировать по: имени</h2>
-				<div className='cards'>
-					{cards.map(card =>
-						<Card firstName={card.firstName} age={card.age} img={card.img} key={card.id} />
-					)}
+			<h2 className={'persons__title'}>Сортировать по: имени</h2>
+			<div className={'persons__cards'}>
+				{cards.map(card =>
+					<Card firstName={card.firstName} age={card.age} img={card.img} key={card.id} />
+				)}
 
-				</div>
-			</Container>
-			<Footer />
+			</div>
 		</div>
 	);
 }
 
-export default Main;
+export default Persons;

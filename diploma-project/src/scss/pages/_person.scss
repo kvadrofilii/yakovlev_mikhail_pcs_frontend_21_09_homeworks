@@ -1,4 +1,4 @@
-.profile-wrapper {
+.person-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 
@@ -7,13 +7,13 @@
 	}
 }
 
-.profile__content-wrapper {
+.person__content-wrapper {
 	@media (min-width: $tablet-width) {
 		margin-left: 70px;
 	}
 }
 
-.profile__title {
+.person__title {
 	font-weight: 500;
 	font-size: 2.4rem;
 
@@ -22,7 +22,7 @@
 	}
 }
 
-.profile__about-us {
+.person__about-us {
 	font-weight: 500;
 	font-size: 1.8rem;
 }
