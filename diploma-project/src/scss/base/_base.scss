@@ -26,6 +26,19 @@ body {
 	height: 100%;
 }
 
-.App {
+.app {
 	height: 100%;
+}
+
+//.main {
+//}
+
+.link {
+	text-decoration: none;
+	color: $color-text;
+	cursor: pointer;
+
+	&:visited {
+		color: $color-dark-text;
+	}
 }
