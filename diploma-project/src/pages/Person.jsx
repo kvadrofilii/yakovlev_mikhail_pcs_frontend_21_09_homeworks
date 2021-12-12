@@ -1,19 +1,88 @@
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 import Button from '../components/Button.jsx';
 import PhotoPerson from '../components/PhotoPerson.jsx';
-import photo from '../assets/img/users/woman/1.jpg';
-
 
 function Person() {
+	const { id } = useParams();
+
+	// TODO: del prod
+	const [cards] = useState([
+		{
+			"id": 11,
+			"firstName": "Jessie",
+			"age": "22",
+			"img": "../assets/img/users/woman/1.jpg",
+			"aboutUs": "Адекватного мужчину… реальное предложение.. реальная встреча… смотрите возрастные рамки пожалуйста молодые люди… Если Вас, что-то не устроило.., не надо грязи и хамства – это не по-мужски… Найдите в себе силы, просто пройти мимо… Я уважаю мужчин, и хотелось бы общаться именно с теми, кто знает себе цену и цену времени! Очень удивляют коллекционеры телефонов, мне кажется нужно быть полным неудачником, чтобы тратить несколько недель, куча слов, обещаний, на то чтобы уговорить на встречу, получить телефон и все, на этом миссия выполнена! Прошу, уважайте свое и мое время Мне интересно только реальное конкретное общение! И предложения встречи. С определенным временем и днем. (а не как-нибудь, где-нибудь, во сколько-нибудь) или вечером после. И. т.д."
+		},
+		{
+			"id": 12,
+			"firstName": "Nikki",
+			"age": "35",
+			"img": "../assets/img/users/woman/2.jpg"
+		},
+		{
+			"id": 13,
+			"firstName": "Alana",
+			"age": "25",
+			"img": "../assets/img/users/woman/3.jpg"
+		},
+		{
+			"id": 14,
+			"firstName": "Brianna",
+			"age": "36",
+			"img": "../assets/img/users/woman/4.jpg"
+		},
+		{
+			"id": 15,
+			"firstName": "Sasha",
+			"age": "33",
+			"img": "../assets/img/users/woman/5.jpg"
+		},
+		{
+			"id": 16,
+			"firstName": "Sarah",
+			"age": "25",
+			"img": "../assets/img/users/woman/6.jpg"
+		},
+		{
+			"id": 17,
+			"firstName": "Koni",
+			"age": "25",
+			"img": "../assets/img/users/woman/7.jpg"
+		},
+		{
+			"id": 18,
+			"firstName": "Chanel",
+			"age": "25",
+			"img": "../assets/img/users/woman/8.jpg"
+		},
+		{
+			"id": 19,
+			"firstName": "Asa",
+			"age": "32",
+			"img": "../assets/img/users/woman/9.jpg"
+		},
+		{
+			"id": 20,
+			"firstName": "Alexa",
+			"age": "40",
+			"img": "../assets/img/users/woman/10.jpg"
+		}
+	]);
+
+	const card = cards.find(item => item.id === +id)
+
 	return (
 		<div>
 			<Button type='link' url='/' className='button button_outline button_big' text='Назад' />
 			<div className='person-wrapper'>
-				<PhotoPerson url={photo} alt='' />
+				<PhotoPerson url={card.img} alt='' />
 				<div className='person__content-wrapper'>
-					<h2 className='person__title'>Jessie 22</h2>
+					<h2 className='person__title'>{`${card.firstName} ${card.age}`}</h2>
 					<Button type='button' url='/' className='button button_colored button_small' text='Поприветствовать' />
 					<h3 className='person__about-us'>О себе</h3>
-					<p>А кого хочу встретить знаю, в себе уверен. Разовый секс не интересен. На первом месте взаимопонимание, уважение, доверие, а за тем любовь. Прежде всего я ЧЕЛОВЕК со своими плюсами и минусами. ДА! Забыл про ВКЛАД в Швейцарском Банке и нефтяную скважину) – актуально, нет денег – нет спроса). Идеальных людей нет. Если вы здесь не „на работе“ или просто делать нечего, повышаете себе самооценку, или убиваете время, так как в реале многие уже, наверное, разучились общаться в живую, да и домашним уже не до вас… Запишитесь на курсы макраме…) Никого не хочу обидеть, все вы достойны уважения. Вы все достойны лучшего, главное планку свою не завышать относительно Реальности. PS: Для тех кого интересует только статус, благосостояние и меркантильный интерес, отвечаю: за границей не был, не привлекался, не участвовал, автомобиль отечественный, квартиру снимаю, работаю в жилконторе, „лужу паяю, утюги починяю“ (работу люблю) …на кухне равных нет, на швейной машинке крестиком вышиваю…Руки не золотые, но контакты платиновые) По жизни, в работе и в быту самодостаточен и состоялся. Прежние семейные отношения себя изжили, но думаю, что расстались мы из-за лени и по глупости. Подробнее в Автопортрете.</p>
+					<p>{card.aboutUs}</p>
 				</div>
 			</div>
 		</div>

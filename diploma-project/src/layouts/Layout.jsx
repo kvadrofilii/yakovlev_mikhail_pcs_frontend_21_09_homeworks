@@ -5,7 +5,7 @@ import Footer from '../components/Footer.jsx';
 function Layout({ page = 'login' }) {
 	return (
 		<div className={'app'}>
-			<Header page={page} />
+			<Header />
 			<main className={'container main'}>
 				<Outlet />
 			</main>
