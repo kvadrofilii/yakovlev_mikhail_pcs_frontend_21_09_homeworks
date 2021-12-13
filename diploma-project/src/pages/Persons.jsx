@@ -78,7 +78,7 @@ function Persons() {
 	return (
 		<div>
 
-			<h2 className={'persons__title'}>Сортировать по: имени</h2>
+			{/*<h2 className={'persons__title'}>Сортировать по: имени</h2>*/}
 			<div className={'persons__cards'}>
 				{cards.map(card =>
 					<Card firstName={card.firstName} age={card.age} img={card.img} id={card.id} key={card.id} />
