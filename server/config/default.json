@@ -1,5 +1,5 @@
 {
-	"serverPort": 6000,
+	"serverPort": 8080,
 	"jwtSecret": "diploma_project_znakomstva",
 	"dbUrl": "mongodb+srv://Michael:Puzrow-fovgof-rozdi7@znakomstva.qpn8s.mongodb.net/Znakomstva?retryWrites=true&w=majority"
 }

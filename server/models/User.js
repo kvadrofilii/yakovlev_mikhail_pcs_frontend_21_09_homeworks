@@ -4,7 +4,11 @@ const schema = new Schema({
 	email: { type: String, required: true, unique: true },
 	password: { type: String, required: true },
 	avatar: { type: String },
-	files: [{ type: ObjectId, ref: 'File' }]
+	firstname: { type: String },
+	lastname: { type: String },
+	about: { type: String },
+	age: { type: Number },
+	gender: { type: String }
 });
 
 module.exports = model('User', schema);

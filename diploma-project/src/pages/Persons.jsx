@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from '../components/Card.jsx';
+import { useDispatch, useSelector } from "react-redux";
 
 function Persons() {
 
@@ -67,8 +68,16 @@ function Persons() {
 		}
 	]);
 
+	// TODO: del prod
+	const isAuth = useSelector(state => state.user.isAuth);
+	const token = useSelector(state => state.user.token);
+
+	console.log(isAuth);
+	console.log(token);
+
 	return (
 		<div>
+
 			<h2 className={'persons__title'}>Сортировать по: имени</h2>
 			<div className={'persons__cards'}>
 				{cards.map(card =>

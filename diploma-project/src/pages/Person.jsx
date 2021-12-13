@@ -75,7 +75,7 @@ function Person() {
 
 	return (
 		<div>
-			<Button type='link' url='/' className='button button_outline button_big' text='Назад' />
+			<Button type='link' url={'/'} className='button button_outline button_big' text='Назад' />
 			<div className='person-wrapper'>
 				<PhotoPerson url={card.img} alt='' />
 				<div className='person__content-wrapper'>

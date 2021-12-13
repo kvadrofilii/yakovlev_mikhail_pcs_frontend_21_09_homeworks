@@ -1,13 +1,17 @@
+import React from 'react';
 import Logo from './Logo.jsx';
 import avatar from '../assets/img/user-1.jpg';
 import Button from './Button.jsx';
-import { useLocation, useSelector } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../reducers/userReducer";
 
 function Header({ token }) {
 	const location = useLocation();
-	//const token = useSelector(state => state.auth.token)
+	const isAuth = useSelector(state => state.user.isAuth);
+	const dispatch = useDispatch();
 
-	if (token) {
+	if (isAuth) {
 		return (
 			<div className='header'>
 				<div className='container'>
@@ -18,6 +22,7 @@ function Header({ token }) {
 							<div className='header__user'>
 								<img className='header__avatar' src={avatar} alt='User avatar' />
 								<span>Иван Иванов</span>
+								<button type='button' url='' className="button button_outline" onClick={() => dispatch(logout())}>Выход</button>
 							</div>
 						</div>
 					</div>

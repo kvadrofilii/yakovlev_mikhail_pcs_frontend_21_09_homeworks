@@ -15,10 +15,11 @@ router.post('/registration', async (req, res) => {
 		if (candidate) {
 			res.status(400).json({ massage: 'Такой пользователь уже существует' })
 		}
-
+		// hashed password
 		const hashedPassword = await bcrypt.hash(password, 6);
-		const user = new User({ email, password: hashedPassword });
-
+		//create new User
+		const user = new User({ email, password: hashedPassword, firstName, lastName, about, age, gender });
+		//save to DB
 		await user.save();
 
 		res.status(201).json({ massage: 'Пользователь создан' });
@@ -32,12 +33,13 @@ router.post('/registration', async (req, res) => {
 router.post('/login', async (req, res) => {
 	try {
 		const { email, password } = req.body;
+		// user search 
 		const user = await User.findOne({ email });
 
 		if (!user) {
 			return res.status(400).json({ message: 'Пользователь не найден' });
 		}
-
+		// decrypting the password
 		const isMatch = await bcrypt.compare(password, user.password);
 
 		if (!isMatch) {

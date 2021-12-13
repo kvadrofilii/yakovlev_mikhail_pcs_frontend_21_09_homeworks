@@ -12,7 +12,7 @@ function Card({ firstName, age, img, id }) {
 				<div className='card__text' >
 					<span>{firstName}</span><span>{age}</span>
 				</div>
-				<Button url={'/'} className='button button_small button_colored' text='Поприветствовать' />
+				<Button type={'button'} url={'/'} className='button button_small button_colored' text='Поприветствовать' />
 			</div>
 		</Link>
 	)

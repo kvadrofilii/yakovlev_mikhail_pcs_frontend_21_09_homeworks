@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
-function Button({ type = 'link', url, className, text = 'Button' }) {
-	if (type === 'link') {
-		return <Link to={url} className={`link button ${className}`}>{text}</Link>
-	} else if (type === 'button') {
-		return <button className={`button ${className}`} type="submit">{text}</button>
+//function Button({ type = 'link', url, className, text = 'Button' }) {
+function Button(props) {
+	if (props.type === 'link') {
+		return <Link to={props.url} className={`link button ${props.className}`}>{props.text}</Link>
+	} else if (props.type === 'button') {
+		return <button className={`button ${props.className}`} type="submit">{props.text}</button>
 	}
 };
 
