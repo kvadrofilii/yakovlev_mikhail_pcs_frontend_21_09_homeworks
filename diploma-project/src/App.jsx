@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { auth } from "./actions/user.js";
 import Layout from "./layouts/Layout.jsx";
@@ -39,11 +39,23 @@ function App() {
         <Route path={'privacy'} element={<Privacy />} />
         <Route path={'*'} element={<Page404 />} />
         <Route path={'person-setting'} element={<PersonSetting />} />
-        <Route path={'persons'} element={<Persons />} />
+
+        <Route path={'persons'} element={<PersonsLayout />}>
+          <Route index element={<Persons />} />
+          <Route path={':id'} element={<Person />} />
+        </Route>
+
 
       </Route>
     </Routes>
   );
+}
+
+
+function PersonsLayout() {
+  return (
+    <Outlet />
+  )
 }
 
 export default App;
