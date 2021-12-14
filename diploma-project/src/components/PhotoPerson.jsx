@@ -1,3 +1,5 @@
+import React from 'react';
+
 function PhotoPerson({ url = '' }) {
 	if (url) {
 		return <div className='photo-person' style={{

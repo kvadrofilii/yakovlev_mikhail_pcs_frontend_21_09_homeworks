@@ -1,3 +1,5 @@
+import React from 'react';
+
 function EditPhotoPerson({ url = '' }) {
 	if (url) {
 		return (

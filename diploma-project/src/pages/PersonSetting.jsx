@@ -1,3 +1,4 @@
+import React from 'react';
 import Button from '../components/Button.jsx';
 import EditPhotoPerson from '../components/EditPhotoPerson.jsx';
 import photo from '../assets/img/users/woman/1.jpg';

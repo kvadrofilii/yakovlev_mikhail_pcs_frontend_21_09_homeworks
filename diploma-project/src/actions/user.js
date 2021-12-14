@@ -9,8 +9,6 @@ export const registration = async (email, password, firstname, lastname, about, 
 			email, password, firstname, lastname, about, age, gender
 		});
 
-		<Navigate to={'persons'} />
-
 		// TODO:
 		// del prod
 		console.log(response?.data);
@@ -29,7 +27,6 @@ export const login = (email, password) => {
 			dispatch(setUser(response.data.user));
 			localStorage.setItem('token', response.data.token);
 			console.log(response.data);
-			<Navigate to={'persons'} />
 
 		} catch (e) {
 			console.log(e.response.data.message);
