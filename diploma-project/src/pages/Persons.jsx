@@ -1,88 +1,111 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import Card from '../components/Card.jsx';
-//import { useDispatch, useSelector } from "react-redux";
 import cards from '../data/users.json';
-import Gender from '../components/Gender.jsx';
-import Search from '../components/Search.jsx';
 
-function Persons() {
-
-	// TODO: del prod
-	//const isAuth = useSelector(state => state.user.isAuth);
-	//const token = useSelector(state => state.user.token);
-	//console.log(isAuth);
-	//console.log(token);
-
-	// Sort 1 => 10
-	cards.users.sort((x, y) => x["age"] - y["age"]);
-	// Sort 10 => 1
-	//cards.users.sort((x, y) => y["age"] - x["age"]);
-
-	//const man = cards.users.filter((user) => user.gender === 'man');
-	//console.log(man);
-
-	//const woman = cards.users.filter((user) => user.gender === 'woman');
-	//console.log(woman);
-
-	//let isActiveMan = false,
-	//	isActiveWoman = true;
-	let isActiveMan = 'button-gender_outline',
-		isActiveWoman = 'button-gender_colored';
-
-	function isActive(man, woman) {
-		console.log(isActiveMan, isActiveWoman);
-
-		if (man === true) {
-			isActiveMan = 'button-gender_colored';
-			isActiveWoman = 'button-gender_outline';
+export default class Persons extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isActive: true,
+			isAge: true,
+			isFirstName: true,
+			isLastName: true
 		}
-
-		if (woman === true) {
-			isActiveMan = 'button-gender_outline';
-			isActiveWoman = 'button-gender_colored';
+		this.sortGender = () => {
+			this.setState(({ isActive }) => ({
+				isActive: !isActive
+			}))
 		}
-
+		this.sortAge = () => {
+			this.setState((sort) => ({
+				sort: 'age',
+			}))
+			this.setState(({ isAge }) => ({
+				isAge: !isAge
+			}))
+		}
+		this.sortFirstName = () => {
+			this.setState(sort => ({
+				sort: 'firstName'
+			}))
+			this.setState(({ isFirstName }) => ({
+				isFirstName: !isFirstName
+			}))
+		}
+		this.sortLastName = () => {
+			this.setState(sort => ({
+				sort: 'lastName'
+			}))
+			this.setState(({ isLastName }) => ({
+				isLastName: !isLastName
+			}))
+		}
 	}
 
-	//function isActive(man, woman) {
-	//	isActiveMan = man;
-	//	isActiveWoman = woman;
-	//	console.log(isActiveMan, isActiveWoman);
-	//}
+	render() {
+		const { sort, isActive, isAge, isFirstName, isLastName } = this.state;
+		let sortCards = cards.users;
 
-	return (
-		<div>
-			<div className='search-wrapper'>
-				<Search />
-			</div>
-			<div className='gender-wrapper'>
-				<button type={'button'} className={`button-gender man button-gender_outline`}>
-					<span className={`button-gender__gender man`}></span>
-				</button>
-				<button type={'button'} className={`button-gender woman button-gender_outline`}>
-					<span className={`button-gender__gender woman`}></span>
-				</button>
-			</div>
-			{/*<div className='gender-wrapper'>
-				<button onClick={() => isActive(true, false)} type={'button'} className={`button-gender man ${isActiveMan}`}>
-					<span className={`button-gender__gender man`}></span>
-				</button>
-				<button onClick={() => isActive(false, true)} type={'button'} className={`button-gender woman ${isActiveWoman}`}>
-					<span className={`button-gender__gender woman`}></span>
-				</button>*/}
-			{/*<Gender gender='man' isCondition={isActiveMan} onClick={() => isActive(true, false)} />
-				<Gender gender='woman' isCondition={isActiveWoman} onClick={() => isActive(false, true)} />*/}
-			{/*</div>*/}
+		function sortSwitch(sortCards) {
+			switch (sort) {
+				case 'age': {
+					isAge ?
+						sortCards = sortCards.sort((x, y) => x["age"] - y["age"]) :
+						sortCards = sortCards.sort((x, y) => y["age"] - x["age"]);
+					break;
+				}
+				case 'firstName': {
+					isFirstName ?
+						sortCards = sortCards.sort((a, b) => a.firstName.localeCompare(b.firstName)) :
+						sortCards = sortCards.sort((a, b) => b.firstName.localeCompare(a.firstName));
+					break;
+				}
+				case 'lastName': {
+					isLastName ?
+						sortCards = sortCards.sort((a, b) => a.lastName.localeCompare(b.lastName)) :
+						sortCards = sortCards.sort((a, b) => b.lastName.localeCompare(a.lastName));
+					break;
+				}
+				default: {
+					sortCards = cards.users;
+					break;
+				}
+			}
+		}
 
-			{/*<h2 className={'persons__title'}>Сортировать по: имени</h2>*/}
-			<div className={'persons__cards'}>
-				{cards.users.map(card =>
-					<Card firstName={card.firstName} age={card.age} img={card.img} id={card.id} key={card.id} />
-				)}
+		let isGender = true;
+		if (isActive) {
+			sortCards = cards.users.filter((user) => user.gender === 'woman');
+			sortSwitch(sortCards);
+			isGender = 'woman';
+		} else {
+			sortCards = cards.users.filter((user) => user.gender === 'man');
+			sortSwitch(sortCards);
+			isGender = 'man';
+		}
 
-			</div>
-		</div >
-	);
+		return (
+			<div>
+				<div className='gender-wrapper'>
+					<button
+						type={'button'}
+						className={`button-gender ${isGender}`}
+						onClick={this.sortGender}>
+						<span className={`button-gender__gender ${isGender}`}></span>
+					</button>
+				</div>
+
+				<div className='sort-wrapper'>
+					<button onClick={this.sortAge} className='button button_small persons__button'>Возраст</button>
+					<button onClick={this.sortFirstName} className='button button_small persons__button'>Имя</button>
+					<button onClick={this.sortLastName} className='button button_small persons__button'>Фамилия</button>
+				</div>
+				<div className={'persons__cards'}>
+					{sortCards.map(item =>
+						<Card	{...item} key={item.id} />
+					)}
+				</div>
+			</div >
+		);
+	}
 }
-
-export default Persons;

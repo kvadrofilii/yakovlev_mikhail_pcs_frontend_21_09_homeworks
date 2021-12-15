@@ -1,14 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Gender(props) {
-	let condition = '';
-	if (props.isCondition === true) {
-		condition = 'button-gender_outline';
-	} else if (props.isCondition === false) {
-		condition = 'button-gender_colored';
+export default class Gender extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isActive: true
+		}
+		this.nextActive = () => {
+			this.setState(({ isActive }) => ({
+				isActive: !isActive
+			}))
+		}
 	}
 
-	return <button type={'button'} className={`button-gender ${condition} ${props.gender}`} onClick={props.onClick}><span className={`button-gender__gender ${props.gender}`}></span></button>;
-}
+	render() {
+		const { isActive } = this.state;
 
-export default Gender;
+		let isGender = true;
+		if (isActive) {
+			isGender = 'man';
+		} else {
+			isGender = 'woman';
+		}
+
+		return (
+			<div className='gender-wrapper'>
+				<button
+					type={'button'}
+					className={`button-gender ${isGender}`}
+					onClick={this.nextActive}>
+					<span className={`button-gender__gender ${isGender}`}></span>
+				</button>
+			</div>
+		)
+	}
+}

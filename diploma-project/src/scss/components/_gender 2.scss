@@ -1,3 +1,27 @@
+%button-gender_outline {
+	background-clip: text;
+	-webkit-background-clip: text;
+
+	&::before {
+		@extend %button;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+	}
+
+	&::after {
+		@extend %button;
+		left: 1px;
+		top: 1px;
+		bottom: 1px;
+		right: 1px;
+		z-index: -1;
+		background: $color-background;
+	}
+}
+
 .button-gender {
 	position: relative;
 	display: flex;
@@ -58,6 +82,74 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+.man.button-gender_outline {
+	background-clip: text;
+	-webkit-background-clip: text;
+	box-shadow: none;
+
+	&:hover::after {
+		left: 100%;
+		top: 100%;
+		bottom: 100%;
+		right: 100%;
+	}
+
+	&::before {
+		@extend %button;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		background: $color-man;
+		background: $linear-gradient-man;
+	}
+
+	&::after {
+		@extend %button;
+		left: 1px;
+		top: 1px;
+		bottom: 1px;
+		right: 1px;
+		z-index: -1;
+		background: $color-background;
+	}
+}
+
+.woman.button-gender_outline {
+	background-clip: text;
+	-webkit-background-clip: text;
+	box-shadow: none;
+
+	&:hover::after {
+		left: 100%;
+		top: 100%;
+		bottom: 100%;
+		right: 100%;
+	}
+
+	&::before {
+		@extend %button;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		background: $color-woman;
+		background: $linear-gradient-woman;
+	}
+
+	&::after {
+		@extend %button;
+		left: 1px;
+		top: 1px;
+		bottom: 1px;
+		right: 1px;
+		z-index: -1;
+		background: $color-background;
+	}
 }
 
 .gender-wrapper {

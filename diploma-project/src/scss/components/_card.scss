@@ -32,6 +32,35 @@
 	}
 
 	& > span {
-		padding-right: 10px;
+		padding-right: 5px;
 	}
+}
+
+.card__like {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 10px auto;
+	cursor: pointer;
+	background: $color-button;
+	background: $linear-gradient;
+	box-shadow: $color-button-shadow;
+	&:active {
+		background: $color-active;
+	}
+}
+
+.card__heart {
+	width: 30px;
+	height: 30px;
+	background-image: url(../../assets/svg/heart-white.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.like.card__heart {
+	background-image: url(../../assets/svg/heart-color.svg);
 }

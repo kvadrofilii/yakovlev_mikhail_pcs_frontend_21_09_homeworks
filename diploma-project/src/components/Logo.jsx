@@ -11,7 +11,7 @@ function Logo({ auth }) {
 		)
 	} else {
 		return (
-			<Link to={'/'} className={'link'}>
+			<Link to={'persons'} className={'link'}>
 				<div className={'logo-wrapper'}>
 					<div className={`logo__ico logo-main`}></div>
 					<span className={`logo__text logo-main`}>Znakomstva.com</span>

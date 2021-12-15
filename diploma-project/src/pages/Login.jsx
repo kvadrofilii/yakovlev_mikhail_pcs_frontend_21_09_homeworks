@@ -14,6 +14,11 @@ function Login() {
 	const [password, setPassword] = useState('');
 	const dispatch = useDispatch();
 
+	//function saveAuth() {
+	//	localStorage.setItem('key', 'value');
+	//	console.log(localStorage.getItem('key'));
+	//}
+
 	return (
 		<div>
 			<h1 className='login__title'>Знакомства без преград</h1>
