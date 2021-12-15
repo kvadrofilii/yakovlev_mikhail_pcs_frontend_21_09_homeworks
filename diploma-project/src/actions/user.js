@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { setUser } from "../reducers/userReducer.js";
+import users from '../data/users.json';
 
 export const registration = async (email, password, firstname, lastname, about, age, gender) => {
 	try {
@@ -20,18 +21,31 @@ export const registration = async (email, password, firstname, lastname, about, 
 }
 
 export const login = (email, password) => {
-	return async dispatch => {
-		try {
-			const response = await axios.post(`http://localhost:8080/api/auth/login`, { email, password });
-			dispatch(setUser(response.data.user));
-			localStorage.setItem('token', response.data.token);
-			console.log(response.data);
+	return dispatch => {
 
-		} catch (e) {
-			console.log(e.response.data.message);
-		}
+		const sortCards = users.users.filter((user) => user.email === email);
+
+		//const response = users.users;
+		//dispatch(setUser(response.data.user));
+		//localStorage.setItem('token', response.data.token);
+		console.log(sortCards);
+
 	}
 }
+
+//export const login = (email, password) => {
+//	return async dispatch => {
+//		try {
+//			const response = await axios.post(`http://localhost:8080/api/auth/login`, { email, password });
+//			dispatch(setUser(response.data.user));
+//			localStorage.setItem('token', response.data.token);
+//			console.log(response.data);
+
+//		} catch (e) {
+//			console.log(e.response.data.message);
+//		}
+//	}
+//}
 
 //export const auth = () => {
 //	return async dispatch => {

@@ -18,7 +18,7 @@ export default class Persons extends Component {
 		}
 		this.sortAge = () => {
 			this.setState((sort) => ({
-				sort: 'age',
+				sort: 'age'
 			}))
 			this.setState(({ isAge }) => ({
 				isAge: !isAge

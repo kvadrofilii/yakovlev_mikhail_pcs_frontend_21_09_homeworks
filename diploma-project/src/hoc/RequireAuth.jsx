@@ -1,10 +1,9 @@
 import React from 'react';
 import { Navigate, Outlet, useLocation } from "react-router-dom";
-import { useSelector } from 'react-redux';
 
 function RequireAuth() {
 	const location = useLocation();
-	const isAuth = useSelector(state => state.user.isAuth);
+	const isAuth = localStorage.getItem('auth');
 
 	if (!isAuth) {
 		return <Navigate to={'login'} state={{ from: location }} />

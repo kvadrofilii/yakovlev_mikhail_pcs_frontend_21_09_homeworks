@@ -1,20 +1,29 @@
 import React from 'react';
 import Logo from './Logo.jsx';
-//import avatar from '../assets/img/user-1.jpg';
 import Button from './Button.jsx';
 import { useLocation, Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-//import { logout } from "../reducers/userReducer";
+import { userName } from "../reducers/userNameReducer";
+//import { useSelector } from 'react-redux';
 
 function logOut() {
 	localStorage.removeItem('auth');
+	localStorage.removeItem('mail');
+	localStorage.removeItem('password');
+	localStorage.removeItem('firstName');
+	localStorage.removeItem('lastName');
+	localStorage.removeItem('about');
+	<Navigate to='login' />
 }
 
-function Header({ token }) {
+function Header() {
+	//const state = useSelector(state => state.userName.name);
 	const location = useLocation();
 	//const isAuth = useSelector(state => state.user.isAuth);
-	const isAuth = true;
+	const isAuth = localStorage.getItem('auth');
 	//const dispatch = useDispatch();
+	const name = localStorage.getItem('firstName');
 
 	if (isAuth) {
 		return (
@@ -23,10 +32,8 @@ function Header({ token }) {
 					<div className='header__main-wrapper'>
 						<Logo auth={true} />
 						<div className='header__main-wrapper'>
-							{/*<div className='header__search'></div>*/}
 							<div className='header__user'>
-								{/*<img className='header__avatar' src={avatar} alt='User avatar' />*/}
-								<span className='header__name'>Michael Yakovlev</span>
+								<span className='header__name'>{name}</span>
 								<Link
 									onClick={logOut}
 									to={'login'}
